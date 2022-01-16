@@ -117,12 +117,12 @@ class HomePage extends StatelessWidget {
                       var input2 = _con.text;
                       var length = double.tryParse(input1);
                       var girth = double.tryParse(input2);
-                      String titleError = 'Error';
-                      String errorMessage = 'Wrong input, Please enter number only.';
+                      String Error = 'Error';
+                      String errorMessage = 'Please enter number only.';
                       if(girth == null || length == null){
                         showDialog(context: context, barrierDismissible: false, builder: (BuildContext context, ) {
                           return AlertDialog(
-                            title: Text(titleError),
+                            title: Text(Error),
                             content: Text(errorMessage),
 
                             actions: [
@@ -130,14 +130,13 @@ class HomePage extends StatelessWidget {
                                   onPressed: () {
                                     Navigator.of(context).pop();
                                   },
-                                  child: Text('Ok')
+                                  child: Text('OK')
                               ),
                             ],
                           );
                         });
                       }
-                      var weight ;
-                      weight = girth! * girth! * length! * 69.3;
+
 
 
 
