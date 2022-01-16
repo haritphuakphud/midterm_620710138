@@ -1,4 +1,4 @@
-class Pig {
+class Pig{
   var _length;
   var _girth;
   Pig(var length, var girth) {
